@@ -1,0 +1,141 @@
+// Mock data for demo mode - allows running the dashboard without external dependencies
+
+export const mockExperiments = [
+  {
+    id: "exp-001",
+    name: "Customer Churn Prediction v1",
+    status: "completed",
+    accuracy: 0.94,
+    precision: 0.92,
+    recall: 0.95,
+    f1Score: 0.93,
+    createdAt: "2024-09-15T10:30:00Z",
+    duration: "12m 34s",
+    model: "Random Forest",
+    parameters: {
+      n_estimators: 100,
+      max_depth: 10,
+      min_samples_split: 2,
+    },
+  },
+  {
+    id: "exp-002",
+    name: "Customer Churn Prediction v2",
+    status: "completed",
+    accuracy: 0.96,
+    precision: 0.94,
+    recall: 0.97,
+    f1Score: 0.95,
+    createdAt: "2024-09-20T14:20:00Z",
+    duration: "15m 12s",
+    model: "Gradient Boosting",
+    parameters: {
+      n_estimators: 200,
+      learning_rate: 0.05,
+      max_depth: 8,
+    },
+  },
+  {
+    id: "exp-003",
+    name: "Customer Churn Prediction v3",
+    status: "running",
+    accuracy: null,
+    precision: null,
+    recall: null,
+    f1Score: null,
+    createdAt: "2024-10-01T09:00:00Z",
+    duration: "5m 23s",
+    model: "XGBoost",
+    parameters: {
+      n_estimators: 150,
+      learning_rate: 0.1,
+      max_depth: 6,
+    },
+  },
+]
+
+export const mockModels = [
+  {
+    id: "model-001",
+    name: "customer-churn-rf",
+    version: "v2.1.0",
+    status: "production",
+    accuracy: 0.96,
+    lastDeployed: "2024-09-25T10:00:00Z",
+    predictions: 125430,
+    framework: "scikit-learn",
+    size: "45.2 MB",
+  },
+  {
+    id: "model-002",
+    name: "customer-churn-gb",
+    version: "v1.5.2",
+    status: "staging",
+    accuracy: 0.94,
+    lastDeployed: "2024-09-20T15:30:00Z",
+    predictions: 8920,
+    framework: "scikit-learn",
+    size: "52.8 MB",
+  },
+  {
+    id: "model-003",
+    name: "customer-churn-xgb",
+    version: "v1.0.0",
+    status: "archived",
+    accuracy: 0.92,
+    lastDeployed: "2024-08-10T12:00:00Z",
+    predictions: 45230,
+    framework: "XGBoost",
+    size: "38.5 MB",
+  },
+]
+
+export const mockDeployments = [
+  {
+    id: "deploy-001",
+    modelId: "model-001",
+    modelName: "customer-churn-rf",
+    version: "v2.1.0",
+    environment: "production",
+    status: "healthy",
+    uptime: "99.98%",
+    avgLatency: 45,
+    requestsPerMin: 1250,
+    errorRate: 0.02,
+    deployedAt: "2024-09-25T10:00:00Z",
+    replicas: 3,
+  },
+  {
+    id: "deploy-002",
+    modelId: "model-002",
+    modelName: "customer-churn-gb",
+    version: "v1.5.2",
+    environment: "staging",
+    status: "healthy",
+    uptime: "99.95%",
+    avgLatency: 52,
+    requestsPerMin: 150,
+    errorRate: 0.05,
+    deployedAt: "2024-09-20T15:30:00Z",
+    replicas: 1,
+  },
+]
+
+export const mockMetrics = {
+  totalExperiments: 47,
+  activeModels: 3,
+  totalPredictions: 1250430,
+  avgAccuracy: 0.94,
+  systemUptime: "99.97%",
+  avgLatency: 48,
+}
+
+export const mockPerformanceData = [
+  { date: "Sep 1", accuracy: 0.92, latency: 52 },
+  { date: "Sep 5", accuracy: 0.93, latency: 50 },
+  { date: "Sep 10", accuracy: 0.94, latency: 48 },
+  { date: "Sep 15", accuracy: 0.95, latency: 46 },
+  { date: "Sep 20", accuracy: 0.96, latency: 45 },
+  { date: "Sep 25", accuracy: 0.96, latency: 45 },
+  { date: "Sep 30", accuracy: 0.96, latency: 44 },
+]
